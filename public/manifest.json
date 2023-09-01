@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "fugui_huahua",
+  "description": "fugui_huahua",
+  "version": "0.1.0",
+  "action": {
+      "default_popup": "index.html",
+      "default_icon": "icons/fugui.png"
+  },
+  "content_scripts": [
+      {
+          "matches": [
+              "<all_urls>"
+          ],
+          "js": [
+              "content-script.js"
+          ]
+      }
+  ],
+  "web_accessible_resources": [
+      {
+          "resources": [
+              "icons/fugui.png"
+          ],
+          "matches": [
+              "<all_urls>"
+          ],
+          "use_dynamic_url": true
+      }
+  ],
+  "permissions": [
+    "tabs",
+    "bookmarks"
+  ],
+  "icons": {
+      "128": "icons/fugui.png"
+  },
+  "author": "https://github.com/fuguid"
+}
