@@ -45,7 +45,7 @@ async function checker() {
 }
 
 async function main() {
-    setInterval(checker, 1000);
+    setInterval(checker, 1000)
 }
  
 main();
