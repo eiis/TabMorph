@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.7.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {

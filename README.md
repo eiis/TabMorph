@@ -1,7 +1,7 @@
 <p align="center"></p>
 
 <p align="center">
-    <img src="./src/assets/fugui.png" width="138"/>
+    <img src="./public/icons/fugui.png" width="138"/>
     <h1 align="center">灵活Tab</h1>
     <p align="center">tab页开了太多？<code>灵活Tab</code> 让你使用tab更轻松</p>
 </p>

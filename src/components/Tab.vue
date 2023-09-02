@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Ref, ref, onMounted } from 'vue';
+// @ts-ignore
+import autoAnimate from "@formkit/auto-animate"
 
 // import { tabType } from './type'
 
@@ -8,6 +10,9 @@ const bookMarks: Ref<chrome.tabs.Tab[]> = ref([])
 // const container = ref<HTMLElement | null>(null);
 
 const tabInnerText = ref('')
+const list = ref<HTMLElement>()
+
+const show =ref(false)
 
 let icons = 'icons/fugui.png'
 
@@ -16,6 +21,8 @@ onMounted(async () => {
     currentWindow: true
   })
   bookMarks.value = res;
+
+  autoAnimate(list.value) // thats it!
 
   // await nextTick()
   // container.value = document.getElementById('tab');
@@ -53,26 +60,26 @@ function mouseenter(e:MouseEvent) {
   const targetElement = e.target as HTMLElement;
   tabInnerText.value = targetElement.innerText;
   if (hiddenText) {
-    hiddenText.classList.remove('invisible');
+    show.value = true
   }
 }
 //离开元素
 function mouseleave() {
   const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
   if (hiddenText) {
-    hiddenText.classList.add('invisible');
+    show.value = false
   }
 }
 
 </script>
 
 <template>
-  <div class="w-[480px] relative p-4 grid col-auto grid-cols-3 gap-2">
-    <span id="hidden-tab" class="w-full px-2 truncate absolute top-[-4px] left-0 text-base text-black dark:text-white font-medium invisible text-center">{{ tabInnerText }}</span>
+  <div ref="list" class="w-[480px] relative p-4 grid col-auto grid-cols-3 gap-2">
+    <span id="hidden-tab" v-show="show" class="w-full px-2 truncate fixed left-0 top-0 text-base text-black dark:text-white font-medium text-center animate-wiggle transition ease-in-out delay-150 translate-x-6 duration-300">{{ tabInnerText }}</span>
     <div v-for="item in bookMarks" 
         @click="bookMark(item)" 
         :key="item.id" 
-        id="tab" 
+        id="tab"
         @mouseenter="mouseenter"
         @mouseleave="mouseleave"
         class="group/item relative h-[42px] my-2 rounded-lg flex items-center justify-center bg-[#F1F1F1] p-[6px] text-center"
