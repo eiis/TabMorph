@@ -1,1 +1,8 @@
-# Vue 3 + TypeScript + Vite
+<p align="center">
+</p>
+
+## 介绍
+显示所有tab的一款浏览器插件,可以直接点击跳转和删除
+## 安装
+## 实践
+
