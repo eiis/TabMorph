@@ -8,7 +8,7 @@
 </p>
 
 ## 介绍
-tab开启太多会影响专注力而且不好查找和删除，但这使得访问tab很不方便，所以我写了一个灵活Tab扩展，只需使用快捷键 `Command + E`(Mac)
+tab开启太多不好查找和删除，访问tab也很不方便，所以我写了一个灵活Tab扩展，只需使用快捷键 `Command + E`(Mac)
 
 <kbd>
   <img src="./src/assets/fugui.gif" width="100%">
