@@ -1,7 +1,7 @@
 <p align="center"></p>
 
 <p align="center">
-    <img src="./public/icons/fugui.png" width="138"/>
+    <img src="./src/assets/fugui.png" width="138"/>
     <h1 align="center">灵活Tab</h1>
     <p align="center">tab页开了太多？<code>灵活Tab</code> 让你使用tab更轻松</p>
 </p>
@@ -11,6 +11,7 @@ tab开启太多不好查找和删除，访问tab也很不方便，所以我写�
 
 <kbd>
   <img src="./src/assets/fugui.gif" width="100%">
+  <img src="./src/assets/fuguiDark.png" width="100%"/>
 </kbd>
 
 
