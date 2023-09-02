@@ -37,11 +37,11 @@ async function checker() {
     }
 
     // if current tab is twitter or youtube
-    if (document.URL.includes("https://twitter.com") || document.URL.includes("https://youtube.com") || document.URL.includes("https://www.youtube.com")) {
-        if (!dameModalAppended) {
-            appendDameModal();
-        }
-    }
+    // if (document.URL.includes("https://twitter.com") || document.URL.includes("https://youtube.com") || document.URL.includes("https://www.youtube.com")) {
+    //     if (!dameModalAppended) {
+    //         appendDameModal();
+    //     }
+    // }
 }
 
 async function main() {
