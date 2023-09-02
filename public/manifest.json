@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "fugui_huahua",
-  "description": "fugui_huahua",
+  "name": "@fugui",
+  "description": "a tab page Viewer",
   "version": "0.1.0",
   "action": {
       "default_popup": "index.html",
@@ -11,7 +11,7 @@
     "_execute_action": {
       "suggested_key": {
         "default": "Ctrl+B",
-        "mac": "Command+U"
+        "mac": "Command+E"
       }
     }
   },
@@ -27,8 +27,7 @@
       }
   ],
   "permissions": [
-    "tabs",
-    "bookmarks"
+    "tabs"
   ],
   "icons": {
       "128": "icons/fugui.png"

@@ -4,7 +4,7 @@ import { Ref, ref } from 'vue';
 
 import {tabs} from './type'
 
-const bookMarks: Ref<tabs[]> = ref([]);  // 定义一个响应式引用存储textarea的值
+const bookMarks: Ref<tabs[]> = ref([])
 
 chrome.tabs.query({
   currentWindow: true
@@ -38,7 +38,7 @@ function deleteTab(e: tabs,event:MouseEvent){
 </script>
 
 <template>
-  <div class="w-[480px] px-4 grid grid-cols-3 gap-2">
+  <div class="w-[480px] px-4 grid grid-cols-3 gap-2 bg-slate-200">
     <div v-for="item in bookMarks" @click="bookMark(item)" :key="item.id" :class="{'bg-orange-500': item.active}" class="group/item relative h-[42px] my-2 rounded-lg flex items-center justify-center bg-[#F1F1F1] p-[6px] text-center">
       <img class="w-[18px] h-[18px] mr-1" :src="item.favIconUrl">
       <span class="truncate w-[80px]">{{ item.title }}</span>
@@ -52,6 +52,3 @@ function deleteTab(e: tabs,event:MouseEvent){
     </div>
   </div>
 </template>
-
-<style scoped>
-</style>
