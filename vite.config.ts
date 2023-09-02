@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     rollupOptions: {
-      input: ['index.html', './src/content-scripts/content-script.ts'],
+      input: ['index.html'],
       output:{
         entryFileNames: '[name].js',
       }
