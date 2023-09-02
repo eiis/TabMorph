@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .dark {
+  background: rgba(15, 23, 42);
+  color-scheme: dark;
+} */

@@ -68,7 +68,7 @@ function mouseleave() {
 
 <template>
   <div class="w-[480px] relative p-4 grid col-auto grid-cols-3 gap-2">
-    <span id="hidden-tab" class="w-full truncate absolute top-[-4px] left-0 text-base text-black font-medium invisible text-center">{{ tabInnerText }}</span>
+    <span id="hidden-tab" class="w-full px-2 truncate absolute top-[-4px] left-0 text-base text-black dark:text-white font-medium invisible text-center">{{ tabInnerText }}</span>
     <div v-for="item in bookMarks" 
         @click="bookMark(item)" 
         :key="item.id" 
