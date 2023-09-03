@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "@fugui",
+  "name": "tabMorph",
   "description": "a tab page Viewer",
   "version": "0.1.1",
   "action": {
