@@ -21,4 +21,4 @@ tab开启太多不好查找和删除，访问tab也很不方便，所以我写�
 ## 实践
 1.使用 Command + E(Mac)、Ctrl+Shift+B(Windows)点击扩展图标
 
-2.将 @fugui 固定到工具栏上
+2.将 tabMorph 固定到工具栏上
