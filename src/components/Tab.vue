@@ -56,26 +56,26 @@ function addTab() {
 
 //进入元素
 function mouseenter(e:MouseEvent) {
-  const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
+  // const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
   const targetElement = e.target as HTMLElement;
   tabInnerText.value = targetElement.innerText;
-  if (hiddenText) {
+  // if (hiddenText) {
     show.value = true
-  }
+  // }
 }
 //离开元素
 function mouseleave() {
-  const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
-  if (hiddenText) {
+  // const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
+  // if (hiddenText) {
     show.value = false
-  }
+  // }
 }
 
 </script>
 
 <template>
   <div ref="list" class="w-[480px] relative p-4 grid col-auto grid-cols-3 gap-2">
-    <span id="hidden-tab" v-show="show" class="w-full px-2 truncate fixed left-0 top-0 text-base text-black dark:text-white font-medium text-center animate-wiggle transition ease-in-out delay-150 translate-x-6 duration-300">{{ tabInnerText }}</span>
+    <span v-show="show" class="w-full px-2 truncate fixed top-1 left-0 text-base text-black dark:text-white font-medium text-center z-[1000] animate-wiggle transition ease-in-out delay-150 translate-x-6 duration-300">{{ tabInnerText }}</span>
     <div v-for="item in bookMarks" 
         @click="bookMark(item)" 
         :key="item.id" 
