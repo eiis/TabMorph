@@ -13,13 +13,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-
+    "strictNullChecks":true,
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": ["chrome"]
+    "noFallthroughCasesInSwitch": true
+    // "types": ["chrome"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "references": [{ "path": "./tsconfig.node.json" }]

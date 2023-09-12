@@ -3,11 +3,7 @@ import { Ref, ref, onMounted } from 'vue';
 // @ts-ignore
 import autoAnimate from "@formkit/auto-animate"
 
-// import { tabType } from './type'
-
 const bookMarks: Ref<chrome.tabs.Tab[]> = ref([])
-
-// const container = ref<HTMLElement | null>(null);
 
 const tabInnerText = ref('')
 const list = ref<HTMLElement>()
@@ -22,16 +18,12 @@ onMounted(async () => {
   })
   bookMarks.value = res;
 
-  autoAnimate(list.value) // thats it!
-
-  // await nextTick()
-  // container.value = document.getElementById('tab');
+  autoAnimate(list.value)
 })
 
 function bookMark(e: chrome.tabs.Tab) {
   // 更新标签页的活动状态
-  //@ts-ignore
-  chrome.tabs.update(e.id, { active: true })
+  chrome.tabs.update(e.id!, { active: true })
 }
 
 function onRemoved() {
@@ -44,8 +36,7 @@ function onError(error: Error) {
 
 function deleteTab(e: chrome.tabs.Tab, event: MouseEvent) {
   event.stopPropagation();
-  //@ts-ignore
-  let removing = chrome.tabs.remove(e.id);
+  let removing = chrome.tabs.remove(e.id!);
   removing.then(onRemoved, onError);
   bookMarks.value = bookMarks.value.filter(item => item.id !== e.id);
 }
@@ -56,19 +47,13 @@ function addTab() {
 
 //进入元素
 function mouseenter(e:MouseEvent) {
-  // const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
   const targetElement = e.target as HTMLElement;
   tabInnerText.value = targetElement.innerText;
-  // if (hiddenText) {
-    show.value = true
-  // }
+  show.value = true
 }
 //离开元素
 function mouseleave() {
-  // const hiddenText = document.getElementById('hidden-tab') as HTMLElement;
-  // if (hiddenText) {
-    show.value = false
-  // }
+  show.value = false
 }
 
 </script>
