@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "tabMorph",
-  "description": "a tab page Viewer",
-  "version": "1.3.4",
+  "name": "tabViewer",
+  "description": "A Tab Page Viewer",
+  "version": "1.3.5",
   "action": {
       "default_popup": "index.html",
       "default_icon": "icons/fugui.png"
@@ -30,7 +30,9 @@
     "tabs"
   ],
   "icons": {
-      "128": "icons/fugui.png"
+    "16": "icons/fugui.png",
+    "48": "icons/fugui.png",
+    "128": "icons/fugui.png"
   },
   "author": "https://github.com/fuguid"
 }
